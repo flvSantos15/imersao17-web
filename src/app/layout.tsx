@@ -12,8 +12,6 @@ export const metadata: Metadata = {
   description: 'Uma Full Cycle shop'
 }
 
-// Parei no 35:09
-
 export default function RootLayout({
   children
 }: Readonly<{
@@ -24,18 +22,21 @@ export default function RootLayout({
       <body className={inter.className}>
         <AppRouterCacheProvider options={{ enableCssLayer: true }}>
           <ThemeProvider theme={theme}>
-            <Navbar />
-            <Box
-              component="main"
-              sx={{
-                flexGrow: 1,
-                bgcolor: 'background.default',
-                mt: ['122px', '135px', '146px'],
-                p: 3
-              }}
-            >
-              {children}
-            </Box>
+            <div>
+              <Navbar />
+
+              <Box
+                component="main"
+                sx={{
+                  flexGrow: 1,
+                  bgcolor: 'background.default',
+                  mt: ['122px', '135px', '146px'],
+                  p: 3
+                }}
+              >
+                {children}
+              </Box>
+            </div>
           </ThemeProvider>
         </AppRouterCacheProvider>
       </body>

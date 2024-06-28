@@ -25,6 +25,7 @@ export function SelectCategory({ categories }: { categories: Category[] }) {
         }}
       >
         <MenuItem value="0">Todas as categorias</MenuItem>
+
         {categories.map((category) => (
           <MenuItem key={category.id} value={category.id}>
             {category.name}

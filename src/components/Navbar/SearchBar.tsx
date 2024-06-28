@@ -54,6 +54,7 @@ export function SearchBar() {
       <SearchIconWrapper>
         <SearchIcon />
       </SearchIconWrapper>
+
       <form
         onSubmit={(event) => {
           event.preventDefault()

@@ -49,6 +49,7 @@ export function UserMenu(props: UserMenuProps) {
       <IconButton size="large" onClick={handleMenu}>
         <AccountCircle />
       </IconButton>
+
       <Menu
         anchorEl={anchorEl}
         anchorOrigin={{
@@ -65,14 +66,19 @@ export function UserMenu(props: UserMenuProps) {
       >
         <MenuItem onClick={redirectToCart}>
           <ShoppingCartIcon />
+
           <Typography>Meu carrinho</Typography>
         </MenuItem>
+
         <MenuItem onClick={redirectToMyOrders}>
           <ListAltIcon />
+
           <Typography>Meus pedidos</Typography>
         </MenuItem>
+
         <MenuItem onClick={handleLogout}>
           <LogoutIcon />
+
           <Typography>Sair</Typography>
         </MenuItem>
       </Menu>
