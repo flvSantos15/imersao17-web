@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 import {
   Box,
   Button,
@@ -8,7 +10,7 @@ import {
   TableRow,
   Typography
 } from '@mui/material'
-import Link from 'next/link'
+
 import { OrderStatus } from '@/shared/models'
 import { OrderServiceFactory } from '@/shared/services/order.service'
 

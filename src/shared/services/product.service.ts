@@ -19,8 +19,10 @@ export class ProductService {
         revalidate: 1
       }
     }) //revalidate on demand
+
     let data = await response.json()
     data = !data ? [] : data
+
     if (search) {
       return data.filter((product: Product) => {
         return product.name.toLowerCase().includes(search.toLowerCase())

@@ -10,32 +10,10 @@ import {
 import Grid2 from '@mui/material/Unstable_Grid2/Grid2'
 import CheckIcon from '@mui/icons-material/Check'
 
-import { Order, OrderStatus } from '@/shared/models'
+// import { Order, OrderStatus } from '@/shared/models'
 import { OrderServiceFactory } from '@/shared/services/order.service'
 
 import { Total } from '@/components/Total'
-
-const order: Order = {
-  id: '1',
-  items: [
-    {
-      id: 1,
-      product: {
-        id: '1',
-        name: 'Product 1',
-        description: 'Camisa branca',
-        price: 100,
-        image_url: 'https://source.unsplash.com/random?product',
-        category_id: '1'
-      },
-      quantity: 2,
-      price: 100
-    }
-  ],
-  total: 1000,
-  status: OrderStatus.PENDING,
-  created_at: '27/06/2024'
-}
 
 async function CheckoutSuccessPage({
   params
@@ -43,7 +21,7 @@ async function CheckoutSuccessPage({
   params: { orderId: string }
 }) {
   const orderService = OrderServiceFactory.create()
-  // const order = await orderService.getOrder(params.orderId)
+  const order = await orderService.getOrder(params.orderId)
   // console.log(order)
   return (
     <Box>

@@ -12,6 +12,8 @@ export const metadata: Metadata = {
   description: 'Uma Full Cycle shop'
 }
 
+// Parei no 1:53:00
+
 export default function RootLayout({
   children
 }: Readonly<{

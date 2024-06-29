@@ -8,9 +8,11 @@ import {
   Typography
 } from '@mui/material'
 import Grid2 from '@mui/material/Unstable_Grid2/Grid2'
+
 import { OrderStatus } from '@/shared/models'
-import { Total } from '@/components/Total'
 import { OrderServiceFactory } from '@/shared/services/order.service'
+
+import { Total } from '@/components/Total'
 
 async function MyOrderDetail({ params }: { params: { orderId: string } }) {
   const order = await OrderServiceFactory.create().getOrder(params.orderId)

@@ -18,47 +18,12 @@ import { ProductService } from '@/shared/services/product.service'
 import { Total } from '@/components/Total'
 import { CheckoutForm } from './CheckoutForm'
 
-const products = [
-  {
-    id: '1',
-    name: 'Product 1',
-    description: 'Camisa branca',
-    price: 100,
-    image_url: 'https://source.unsplash.com/random?product',
-    category_id: '1'
-  },
-  {
-    id: '2',
-    name: 'Calça',
-    description: 'Calça jeans',
-    price: 100,
-    image_url: 'https://source.unsplash.com/random?product',
-    category_id: '1'
-  }
-]
-
-const cart = {
-  items: [
-    {
-      product_id: '1',
-      quantity: 2,
-      total: 200
-    },
-    {
-      product_id: '2',
-      quantity: 1,
-      total: 100
-    }
-  ],
-  total: 1000
-}
-
 async function CheckoutPage() {
-  // const cart = CartServiceFactory.create().getCart()
+  const cart = CartServiceFactory.create().getCart()
   const productService = new ProductService()
-  // const products = await productService.getProductsByIds(
-  //   cart.items.map((item) => item.product_id)
-  // )
+  const products = await productService.getProductsByIds(
+    cart.items.map((item) => item.product_id)
+  )
 
   if (cart.items.length === 0) {
     return redirect('/my-cart')
