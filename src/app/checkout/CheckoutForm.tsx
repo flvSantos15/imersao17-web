@@ -53,6 +53,7 @@ export function CheckoutForm() {
             defaultValue={'12/2022'}
           />
         </Grid2>
+
         <Grid2 xs={12} md={6}>
           <TextField
             name="cc-csc"
@@ -66,6 +67,7 @@ export function CheckoutForm() {
           />
         </Grid2>
       </Grid2>
+
       <Box sx={{ display: 'flex', justifyContent: 'end', mt: 2 }}>
         <Button type="submit" sx={{ mt: 3 }} startIcon={<PaidIcon />}>
           Pagar

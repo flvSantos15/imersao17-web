@@ -5,6 +5,7 @@ import { AuthService } from '@/shared/services/auth.service'
 export async function middleware(request: NextRequest) {
   const authService = new AuthService()
   const user = authService.getUser()
+
   if (authService.isTokenExpired() || !user) {
     const { pathname } = new URL(request.url)
 
