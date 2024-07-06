@@ -68,7 +68,7 @@ async function MyOrderDetail({ params }: { params: { orderId: string } }) {
               </TableRow>
             </TableHead>
             <TableBody>
-              {order.items.map((item, key) => {
+              {order?.items?.map((item, key) => {
                 return (
                   <TableRow key={key}>
                     <TableCell>{item.product.name}</TableCell>
